@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap');
+
+*{
+    /* padding: 0; */
+    /* margin: 0; */
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Quicksand", sans-serif;
+}
+
+.conic-border-button {
+  position: relative;
+  z-index: 0;
+  border-radius: 9999px; /* Tailwind's rounded-full */
+  background: transparent;
+  font-family: "Quicksand", sans-serif;
+  
+
+}
+
+.font-uicksand {
+    font-family: "Quicksand", sans-serif;
+}
+
+.font-playfair {
+   font-family: "Playfair Display", serif;
+}
+
+.bg-code-image {
+  background-image: url('/Images/laptop.png');
+}
+
+
+.conic-border-button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  padding: 1.5px;
+  border-radius: 9999px;
+  background: conic-gradient(
+    from 90deg at 50% 50%,
+    #07A7CD 0deg,
+    #FC0600 62.37deg,
+    #09D809 173.97deg,
+    #FF6600 255.65deg,
+    #F60163 290.5deg,
+    #07A7CD 360deg
+  );
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+}
+.code-container::before {
+  content: "";
+  position: absolute;
+  bottom: 10rem; /* Same as bottom-40 */
+  right: 0;
+  width: 100px; /* Adjust as needed */
+  height: 100px; /* Adjust as needed */
+  /* background-image: url('../public/Images/codeleft.png'); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 10;
+}
+
+.code-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 30;
+  width: 100px; /* Adjust as needed */
+  height: 100px; /* Adjust as needed */
+  /* background-image: url('/Images/codebottom.png'); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 10;
+}
